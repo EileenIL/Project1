@@ -34,6 +34,8 @@ namespace Project1 {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::CheckBox^ checkBox1;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,16 +50,29 @@ namespace Project1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
 			this->SuspendLayout();
+			// 
+			// checkBox1
+			// 
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->Location = System::Drawing::Point(497, 258);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(95, 20);
+			this->checkBox1->TabIndex = 0;
+			this->checkBox1->Text = L"checkBox1";
+			this->checkBox1->UseVisualStyleBackColor = true;
 			// 
 			// About
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1044, 482);
+			this->Controls->Add(this->checkBox1);
 			this->Name = L"About";
 			this->Text = L"About";
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
